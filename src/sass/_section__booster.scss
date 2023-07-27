@@ -1,0 +1,17 @@
+.getstarted {
+	padding: 6rem 0;
+	grid-area: booster;
+	background-color: $color-primary-dark-violet;
+	background-image: url(../img/bg-boost-desktop.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+
+	&__heading-3 {
+		color: $color-white;
+		font-weight: bold;
+	}
+}

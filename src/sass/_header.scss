@@ -1,0 +1,22 @@
+.header {
+	@include paddingEdge();
+	grid-area: header;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	transform: translateY(-5rem);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		&--paragraph {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__background {
+		width: 120%;
+		transform: translateX(18rem);
+	}
+}

@@ -1,0 +1,99 @@
+.heading-1 {
+	color: $color-neutral-very-dark-blue;
+	font-size: 7rem;
+}
+
+.heading-3 {
+	font-size: 3rem;
+	color: $color-neutral-very-dark-blue;
+}
+
+.heading-6 {
+	font-size: 1.8rem;
+	color: $color-neutral-very-dark-violet;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	color: $color-white;
+	background-color: $color-primary-cyan;
+	width: max-content;
+	padding: 1.4rem 3.5rem;
+	border-radius: 4rem;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: $color-primary-cyan-light;
+	}
+}
+
+.btn__signup,
+.btn__signup:link,
+.btn__signup:visited {
+	padding: 1.2rem 2rem;
+}
+
+.btn__shortner {
+	font-size: 1.7rem;
+	border-radius: 7px;
+	font-family: "Poppins";
+	position: relative;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+.btn__shortner--loading .btn__shortner--text {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.btn__shortner--loading::after {
+	content: "";
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border: 4px solid transparent;
+	border-top-color: $color-white;
+	border-radius: 50%;
+	animation: button-loading-spinner 1s ease infinite;
+}
+
+.btn__copy,
+.btn__copy:link,
+.btn__copy:visited {
+	border-radius: 0.5rem;
+	padding: 1rem 3.5rem;
+	font-style: normal;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+}
+
+.btn__copied,
+.btn__copied:link,
+.btn__copied:visited {
+	background-color: $color-primary-dark-violet;
+}
+
+@keyframes button-loading-spinner {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}

@@ -1,0 +1,39 @@
+.navbar {
+	@include paddingEdge();
+	grid-area: navigation;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		font-style: bold;
+		gap: 3rem;
+	}
+
+	&__credentials {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	&__link {
+		color: $color-neutral-gray;
+		text-decoration: none;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $color-neutral-very-dark-violet;
+		}
+	}
+}

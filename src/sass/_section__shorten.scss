@@ -1,0 +1,82 @@
+.main__content {
+	@include paddingEdge();
+	grid-area: shortner;
+	background-color: $color-offset-white;
+	display: flex;
+	flex-direction: column;
+}
+
+.section__links {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	transform: translateY(-7rem);
+
+	&--shortner {
+		padding: 5rem;
+		border-radius: 1rem;
+		background-color: $color-primary-dark-violet;
+		background-image: url(../img/bg-shorten-desktop.svg);
+		display: flex;
+		gap: 2.5rem;
+
+		&-input {
+			display: inline-block;
+			flex: 1 1 auto;
+			border-radius: 5px;
+			font-family: "Poppins";
+			font-size: 1.7rem;
+			padding: 1rem 2rem;
+			transition: all 0.2s;
+			outline: 0;
+
+			&--active {
+				border: 3px solid $color-secondary-red;
+			}
+		}
+
+		&-blank {
+			font-size: 1.3rem;
+			position: absolute;
+			width: max-content;
+			top: 45%;
+
+			& span {
+				color: $color-secondary-red;
+				font-style: italic;
+			}
+		}
+	}
+
+	&--shortned {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		&-list {
+			background-color: $color-white;
+			padding: 1rem 3rem;
+			border-radius: 0.5rem;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			text-align: center;
+		}
+
+		&-link {
+			text-decoration: none;
+			cursor: pointer;
+			border: none;
+			margin-right: auto;
+
+			&__input {
+				color: $color-neutral-very-dark-violet;
+			}
+
+			&__final {
+				color: $color-primary-cyan;
+				margin: 0;
+			}
+		}
+	}
+}
